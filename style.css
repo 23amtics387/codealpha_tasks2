@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  padding-top: 50px;
+}
+
+body.light {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.calculator {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 320px;
+}
+
+body.light .calculator {
+  background: #fff;
+  color: #000;
+}
+
+.display input {
+  width: 100%;
+  height: 60px;
+  background: #1e1e2f;
+  color: #ffffff;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
+}
+
+body.light .display input {
+  background: #f1f3f5;
+  color: #000;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  background: #2c2f4a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #3e4266;
+}
+
+body.light .btn {
+  background: #dee2e6;
+  color: #000;
+}
+
+body.light .btn:hover {
+  background: #ced4da;
+}
+
+.operator {
+  background: #ff7b72;
+}
+
+body.light .operator {
+  background: #ffa69e;
+}
+
+.equals {
+  grid-column: span 2;
+  background: #28c76f;
+}
+
+body.light .equals {
+  background: #51cf66;
+}
+
+.history {
+  margin-top: 20px;
+  background: #212529;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 320px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+body.light .history {
+  background: #f1f3f5;
+  color: #000;
+}
+
+.history h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.history ul {
+  list-style-type: none;
+}
+
+.history ul li {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
